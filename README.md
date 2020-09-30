@@ -1011,7 +1011,7 @@ oc logs amqp-sink-integration-768c959d79-tz4zc -f
 Now that we have an *event sink* to persist events onto our event bus, let's leverage the power of Camel-K to have integrations participate on the event bus: 
 
 ```py
-
+kamel run -n cluster-1 --trait knative-service.enabled=true --trait knative.enabled=true ./src/main/java/io/entropic/integration/examples/eventmesh/EventBusTransformationIntegration.java
 
 ```
 
